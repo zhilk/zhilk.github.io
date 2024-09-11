@@ -1,0 +1,14 @@
+.social-icons a[title="Cv"] svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* When you hover on an social-icons it goes pink */
+.social-icons :hover {
+    color: #00F5FC; /* Change this to your preferred hover color */
+}
+
+/* When you hover on a button it goes pink */
+.buttons :hover {
+    color: #00F5FC; /* Change this to your preferred hover color */
+}

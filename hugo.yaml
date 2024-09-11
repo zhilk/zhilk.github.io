@@ -1,0 +1,96 @@
+baseURL:  "https://zhilk.github.io/"
+title: "Zoe Hilker"
+theme: ["PaperMod"]
+paginate: 5
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableEmoji: true
+
+languages:
+  en:
+    languageName: "English"
+    weight: 1
+    menu:
+      main:
+        - name: Home
+          url: /
+          weight: 1
+        - name: About
+          url: /about/
+          weight: 2
+        - name: CV
+          url: /cv/
+          weight: 3
+        - name: Search
+          url: /search/
+          weight: 5
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+params:
+  env: production
+  description: "Personal website of "
+  author: "Zoe Hilker"
+  
+  defaultTheme: auto
+  ShowShareButtons: false
+  ShowReadingTime: true
+  ShowBreadCrumbs: true
+  ShowPostNavLinks: true
+  ShowCodeCopyButtons: true
+  ShowFullTextinRSS: true
+  
+  profileMode:
+    enabled: true
+    title: "Zoe Hilker"
+    subtitle: "Doctoral candidate [@Max Planck School of Cognition](https://www.maxplanckschools.org/en)"
+    imageUrl: "/images/profile.png"
+    imageTitle: "Profile Picture"
+    imageWidth: 200
+    imageHeight: 200
+    buttons:
+      - name: About Me
+        url: about
+      - name: Projects
+        url: https://osf.io/jyfuv/
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/zhilk"
+    - name: linkedin
+      url: "https://linkedin.com/in/zhilk"
+    - name: email
+      url: "mailto: zoe.hilker@maxplanckschools.de"
+      title: "Email Me"
+
+  assets:
+    favicon: "/favicon.ico"
+    favicon16x16: "/favicon-16x16.png"
+    favicon32x32: "/favicon-32x32.png"
+    apple_touch_icon: "/apple-touch-icon.png"
+
+  cover:
+    responsiveImages: true
+    linkFullImages: true
+
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+
+markup:
+  highlight:
+    noClasses: false
+    lineNos: true
+    style: monokai

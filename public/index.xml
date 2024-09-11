@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Zoe Hilker</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Zoe Hilker</description>
+    <generator>Hugo -- 0.129.0</generator>
+    <language>en</language>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>About Me (Zoe) Doctoral Candidate in Cognitive Neuroscience My research focuses on our perception of pain and how expectations can shift this perception. I work at the University Clinic Eppendorf in Hamburg under supervision of Professor Christian Büchel and Professor Peter Dayan. My PhD project looks into the inference of causes in pain perception utilising Baysian causal modelling.
+Research Focus Pain Perception Learning and Expectation Behavioural Modelling of Cognitive Processes Collaboration My doctoral research is a collaborative effort between the Max Planck School of Cognition, the University Clinic Eppendorf, and the University Hamburg.</description>
+      <content:encoded><![CDATA[<h1 id="about-me-zoe">About Me (Zoe)</h1>
+<h3 id="doctoral-candidate-in-cognitive-neuroscience">Doctoral Candidate in Cognitive Neuroscience</h3>
+<p>My research focuses on our perception of pain and how expectations can shift this perception. I work at the University Clinic Eppendorf in Hamburg under supervision of Professor Christian Büchel and Professor Peter Dayan. My PhD project looks into the inference of causes in pain perception utilising Baysian causal modelling.</p>
+<h3 id="research-focus">Research Focus</h3>
+<ul>
+<li>Pain Perception</li>
+<li>Learning and Expectation</li>
+<li>Behavioural Modelling of Cognitive Processes</li>
+</ul>
+<h3 id="collaboration">Collaboration</h3>
+<p>My doctoral research is a collaborative effort between the Max Planck School of Cognition, the University Clinic Eppendorf, and the University Hamburg.</p>
+<p>I&rsquo;m always open to discussing new ideas in the field of pain or cognitive modelling - please get in touch if you would like to chat about these topics :)</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>CV</title>
+      <link>http://localhost:1313/cv/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/cv/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

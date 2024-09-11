@@ -1,0 +1,151 @@
+{{ define "main" }}
+<style>
+:root {
+  --primary-color: #333333;
+  --secondary-color: #555555;
+  --accent-color: #777777;
+  --background-color: #ffffff;
+}
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: var(--primary-color);
+  background-color: var(--background-color);
+}
+.cv-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+.cv-header {
+  margin-bottom: 30px;
+}
+.cv-header h1 {
+  color: var(--primary-color);
+  font-size: 2.2em;
+  margin-bottom: 10px;
+}
+.cv-header p {
+  color: var(--secondary-color);
+  font-size: 1em;
+  margin: 5px 0;
+}
+.cv-section {
+  margin-bottom: 30px;
+}
+.cv-section h2 {
+  color: var(--primary-color);
+  font-size: 1.5em;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid var(--accent-color);
+}
+.cv-item {
+  margin-bottom: 20px;
+}
+.cv-item h3 {
+  color: var(--secondary-color);
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+.cv-item p {
+  margin: 0 0 10px 0;
+  font-size: 1em;
+}
+.cv-item .details {
+  padding-left: 0;
+  margin-top: 5px;
+}
+.cv-item .details p {
+  margin-bottom: 5px;
+}
+.cv-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.skill-category {
+  flex: 1 1 calc(50% - 10px);
+  min-width: 200px;
+}
+.skill-category h4 {
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+.skill-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.skill-list li {
+  margin-bottom: 5px;
+}
+.languages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.language-tag {
+  background-color: var(--accent-color);
+  color: white;
+  padding: 3px 10px;
+  font-size: 0.9em;
+}
+@media (max-width: 600px) {
+  .skill-category {
+    flex: 1 1 100%;
+  }
+}
+</style>
+<div class="cv-content">
+  <div class="cv-header">
+    <h1>{{ .Params.name }}</h1>
+    <p>{{ .Params.tagline }}</p>
+    <p>{{ .Params.contact }}</p>
+  </div>
+  {{ range .Params.sections }}
+  <div class="cv-section">
+    <h2>{{ .title }}</h2>
+    {{ if eq .title "SKILLS" }}
+    <div class="cv-skills">
+      {{ range .items }}
+      <div class="skill-category">
+        <h4>{{ .name }}</h4>
+        <ul class="skill-list">
+          {{ range .details }}
+          <li>{{ . | markdownify }}</li>
+          {{ end }}
+        </ul>
+      </div>
+      {{ end }}
+    </div>
+    {{ else }}
+    {{ range .items }}
+    <div class="cv-item">
+      <h3>{{ .name }}</h3>
+      {{ with .description }}<p>{{ . | markdownify }}</p>{{ end }}
+      {{ with .details }}
+      <div class="details">
+        {{ range . }}
+        <p>{{ . | markdownify }}</p>
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+    {{ end }}
+    {{ end }}
+  </div>
+  {{ end }}
+  {{ with .Params.languages }}
+  <div class="cv-section">
+    <h2>LANGUAGES</h2>
+    <div class="languages">
+      {{ range . }}
+      <span class="language-tag">{{ . }}</span>
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+</div>
+{{ end }}
