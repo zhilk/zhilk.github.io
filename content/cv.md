@@ -52,6 +52,7 @@ sections:
           - "Development and design of a study investigating the connection between the detection of face pareidolia and different measurements of holisitic face processing."    
           
   - title: "PUBLICATION AND CONFERENCES"
+    subtitle: "ORCID ID: 0009-0006-3151-6431"
     items:
       - name: "Publications"
         details:
